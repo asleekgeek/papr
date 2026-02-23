@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 
+## [18.0.0](https://github.com/asleekgeek/papr/compare/v17.0.0...v18.0.0) (2026-02-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* Published as an ESM package. Requires node.js >=22.12.0.
+* Requires mongodb >=v7.0.0
+* `node` minimum version is now v16.20.1
+* Node.js v14 is not supported.
+* The return type of `bulkWrite` now includes also `void`
+* Nested properties after 6 levels of nesting are no longer type checked.
+* Papr is using new internal stricter types for query filters and update
+* `Filter` and `UpdateFilter` types are now using the strict counterpart types from mongodb v5.
+
+### Features
+
+* Add `findCursor` model method ([#454](https://github.com/asleekgeek/papr/issues/454)) ([3b65525](https://github.com/asleekgeek/papr/commit/3b6552593403d4fd4f2c382f53021e4b5666406e))
+* Add mongodb v5 support with strict filter types ([#422](https://github.com/asleekgeek/papr/issues/422)) ([547a794](https://github.com/asleekgeek/papr/commit/547a794dc4256e5a97f3bf13a08b4de659fd411d))
+* Adopt filter types from mongodb and enhance strictness ([#430](https://github.com/asleekgeek/papr/issues/430)) ([b54ef0b](https://github.com/asleekgeek/papr/commit/b54ef0b76ee899d1a6d7e0fae9b90e3063775eaf))
+* Allow const enums ([#497](https://github.com/asleekgeek/papr/issues/497)) ([194e505](https://github.com/asleekgeek/papr/commit/194e505ae0837fc53cc746330ca003f7a106e8a0))
+* bulkWrite method accepts readonly operations ([#831](https://github.com/asleekgeek/papr/issues/831)) ([f517739](https://github.com/asleekgeek/papr/commit/f517739ec2587051b03e333ae0398784961c9934))
+* Support asynchronous dynamic defaults ([#678](https://github.com/asleekgeek/papr/issues/678)) ([125f207](https://github.com/asleekgeek/papr/commit/125f2074b8bb0e2963a1ba173b68ee6b0d285377))
+* Support dynamic default values ([#527](https://github.com/asleekgeek/papr/issues/527)) ([34d0434](https://github.com/asleekgeek/papr/commit/34d043423f79a541b622053e10793dc22313cb01))
+* Support excluding fields in ProjectionType ([#360](https://github.com/asleekgeek/papr/issues/360)) ([086d8f1](https://github.com/asleekgeek/papr/commit/086d8f160d7ec6fdd78e439f3d5b8d6d94f5ace2))
+* Support options for upsert model method ([#711](https://github.com/asleekgeek/papr/issues/711)) ([b92a507](https://github.com/asleekgeek/papr/commit/b92a507277c734423feb5f3abd163eb1ccafc47a))
+* Support TypeScript moduleResolution nodenext option ([#460](https://github.com/asleekgeek/papr/issues/460)) ([14791f6](https://github.com/asleekgeek/papr/commit/14791f671e652db1814c618afc67face19271c08))
+* Type check nested objects in generic objects ([#439](https://github.com/asleekgeek/papr/issues/439)) ([3a142f3](https://github.com/asleekgeek/papr/commit/3a142f333d95c7a4145db2e4deff022655862e6e))
+* Upgrade mongodb to v6.0.0 ([#569](https://github.com/asleekgeek/papr/issues/569)) ([a95bfb4](https://github.com/asleekgeek/papr/commit/a95bfb45c11d6bcaf48d5ed51f0f7299814776a2))
+* Upgrade MongoDB v7 ([#1023](https://github.com/asleekgeek/papr/issues/1023)) ([36c5af9](https://github.com/asleekgeek/papr/commit/36c5af9aca56ffd691e94b2cd9700aec3eedaa16))
+
+
+### Bug Fixes
+
+* Don't exclude null from oneOf type ([#719](https://github.com/asleekgeek/papr/issues/719)) ([47140c5](https://github.com/asleekgeek/papr/commit/47140c536fc6f69888c0fff09a45c4c9fa40a9eb))
+* Export schema only once ([#736](https://github.com/asleekgeek/papr/issues/736)) ([fee69db](https://github.com/asleekgeek/papr/commit/fee69dba93d512d4b25eb6d989aebe72c9ebd45a))
+* Run husky on prepare life-cycle script ([#813](https://github.com/asleekgeek/papr/issues/813)) ([7c4eb98](https://github.com/asleekgeek/papr/commit/7c4eb988aa7719f172efc4d12c2b78df733fca3d))
+
+
+### Performance Improvements
+
+* Improve update filter types check times ([#440](https://github.com/asleekgeek/papr/issues/440)) ([15d1ba9](https://github.com/asleekgeek/papr/commit/15d1ba903d3d7ecba3522d5b8908014ad2b5355d))
+
+
+### Code Refactoring
+
+* Convert to ESM package ([#1027](https://github.com/asleekgeek/papr/issues/1027)) ([097d254](https://github.com/asleekgeek/papr/commit/097d25456be7e22358e77af4cbc01f2cc50b9f84))
+* Perform no-op on `bulkWrite` when no operations provided ([#455](https://github.com/asleekgeek/papr/issues/455)) ([d56a0f6](https://github.com/asleekgeek/papr/commit/d56a0f67e00de30e13b1be814a5f33bb455f0004))
+* Remove node.js v14 support ([#464](https://github.com/asleekgeek/papr/issues/464)) ([935b331](https://github.com/asleekgeek/papr/commit/935b33162aa41356779131182767630f8776b1c4))
+
 ## [17.0.0](https://github.com/plexinc/papr/compare/v16.0.0...v17.0.0) (2026-01-27)
 
 
