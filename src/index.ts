@@ -1,3 +1,5 @@
+import { createRequire } from 'node:module';
+
 import { Db } from 'mongodb';
 
 import { abstract, build } from './model.ts';
@@ -6,6 +8,9 @@ import types from './types.ts';
 import type { Model } from './model.ts';
 import type { SchemaOptions } from './schema.ts';
 import type { BaseSchema, ModelOptions } from './utils.ts';
+
+const require = createRequire(import.meta.url);
+const pkg = require('../package.json') as { version: string };
 
 export default class Papr {
   db?: Db;
@@ -56,6 +61,10 @@ export default class Papr {
   initialize(db: Db): void {
     if (this.db) {
       return;
+    }
+
+    if (typeof db.client?.appendMetadata === 'function') {
+      db.client.appendMetadata({ name: 'Papr', version: pkg.version });
     }
 
     this.db = db;
