@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file. See [release-please](https://github.com/googleapis/release-please#how-should-i-write-my-commits) for commit guidelines.
 
 
+## [18.0.0](https://github.com/asleekgeek/papr/compare/v17.1.1...v18.0.0) (2026-08-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* Published as an ESM package. Requires node.js >=22.12.0.
+* Requires mongodb >=v7.0.0
+* `node` minimum version is now v16.20.1
+
+### Features
+
+* Allow const enums ([#497](https://github.com/asleekgeek/papr/issues/497)) ([194e505](https://github.com/asleekgeek/papr/commit/194e505ae0837fc53cc746330ca003f7a106e8a0))
+* bulkWrite method accepts readonly operations ([#831](https://github.com/asleekgeek/papr/issues/831)) ([f517739](https://github.com/asleekgeek/papr/commit/f517739ec2587051b03e333ae0398784961c9934))
+* Include Papr version details in MongoDB handshake ([#1040](https://github.com/asleekgeek/papr/issues/1040)) ([6212189](https://github.com/asleekgeek/papr/commit/6212189975b79cee0fa6b4b798d4dddbf0302882))
+* Support asynchronous dynamic defaults ([#678](https://github.com/asleekgeek/papr/issues/678)) ([125f207](https://github.com/asleekgeek/papr/commit/125f2074b8bb0e2963a1ba173b68ee6b0d285377))
+* Support dynamic default values ([#527](https://github.com/asleekgeek/papr/issues/527)) ([34d0434](https://github.com/asleekgeek/papr/commit/34d043423f79a541b622053e10793dc22313cb01))
+* Support options for upsert model method ([#711](https://github.com/asleekgeek/papr/issues/711)) ([b92a507](https://github.com/asleekgeek/papr/commit/b92a507277c734423feb5f3abd163eb1ccafc47a))
+* Upgrade mongodb to v6.0.0 ([#569](https://github.com/asleekgeek/papr/issues/569)) ([a95bfb4](https://github.com/asleekgeek/papr/commit/a95bfb45c11d6bcaf48d5ed51f0f7299814776a2))
+* Upgrade MongoDB v7 ([#1023](https://github.com/asleekgeek/papr/issues/1023)) ([36c5af9](https://github.com/asleekgeek/papr/commit/36c5af9aca56ffd691e94b2cd9700aec3eedaa16))
+
+
+### Bug Fixes
+
+* Add version.json to parse Papr version ([#1077](https://github.com/asleekgeek/papr/issues/1077)) ([7e47f18](https://github.com/asleekgeek/papr/commit/7e47f18fac27549ee62676ad16934e07aeb51d77))
+* Don't exclude null from oneOf type ([#719](https://github.com/asleekgeek/papr/issues/719)) ([47140c5](https://github.com/asleekgeek/papr/commit/47140c536fc6f69888c0fff09a45c4c9fa40a9eb))
+* Export schema only once ([#736](https://github.com/asleekgeek/papr/issues/736)) ([fee69db](https://github.com/asleekgeek/papr/commit/fee69dba93d512d4b25eb6d989aebe72c9ebd45a))
+* Filter invalid values in getIds ([#979](https://github.com/asleekgeek/papr/issues/979)) ([7cd98a1](https://github.com/asleekgeek/papr/commit/7cd98a16e237fa5ffee8fecd2e5dd772dee6c278))
+* Run husky on prepare life-cycle script ([#813](https://github.com/asleekgeek/papr/issues/813)) ([7c4eb98](https://github.com/asleekgeek/papr/commit/7c4eb988aa7719f172efc4d12c2b78df733fca3d))
+
+
+### Code Refactoring
+
+* Convert to ESM package ([#1027](https://github.com/asleekgeek/papr/issues/1027)) ([097d254](https://github.com/asleekgeek/papr/commit/097d25456be7e22358e77af4cbc01f2cc50b9f84))
+
 ## [17.1.1](https://github.com/plexinc/papr/compare/v17.1.0...v17.1.1) (2026-08-06)
 
 
